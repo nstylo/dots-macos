@@ -1,0 +1,30 @@
+local options = {
+  ensure_installed = {
+    "css-lsp",
+    "dockerfile-language-server",
+    "go-debug-adapter",
+    "gofumpt",
+    "goimports",
+    "gopls",
+    "html-lsp",
+    "lua-language-server",
+    "pyright",
+    "python-lsp-server",
+    "rust-analyzer",
+    "rustfmt",
+    "shfmt",
+    "stylua",
+    "typescript-language-server",
+    "vue-language-server",
+    "yaml-language-server",
+    "clangd",
+    "clang-tidy",
+    "black",
+    "isort",
+    "prettier",
+    "prettierd",
+    "svelte-language-server",
+  },
+}
+
+return options
