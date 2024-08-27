@@ -88,10 +88,10 @@ tell application "System Events"
 end tell'
 '''
 
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
+alt-h = 'focus left --boundaries-action stop'
+alt-j = 'focus down --boundaries-action stop'
+alt-k = 'focus up --boundaries-action stop'
+alt-l = 'focus right --boundaries-action stop'
 
 alt-shift-h = 'move left'
 alt-shift-j = 'move down'
@@ -160,5 +160,15 @@ esc = 'mode main'
 
 [[on-window-detected]]
 if.app-id = "org.pqrs.Karabiner-Elements.Settings"
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = "com.apple.Preview"
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = "com.apple.finder"
 check-further-callbacks = true
 run = 'layout floating'

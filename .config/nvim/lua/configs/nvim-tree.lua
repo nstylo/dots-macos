@@ -11,6 +11,14 @@ local options = {
       },
     },
   },
+
+  view = {
+    adaptive_size = true,
+    width = {
+      min = 35,
+      max = 50,
+    },
+  },
 }
 
 return options
