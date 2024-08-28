@@ -26,3 +26,12 @@ autocmd("CursorHold", {
     vim.diagnostic.open_float(nil, { focus = false, scope = "line" })
   end,
 })
+
+-- NOTE: https://github.com/NvChad/NvChad/issues/2854
+autocmd("LspAttach", {
+  callback = function(args)
+    vim.schedule(function()
+      vim.keymap.set("n", "<leader>ra", ":Lspsaga rename<CR>", { buffer = args.buf })
+    end)
+  end,
+})

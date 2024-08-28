@@ -27,11 +27,11 @@ map("n", "<gl>", ":Git blame<CR>")
 map("n", "<leader>m>", ":MarkdownPreview<CR>")
 
 -- clang stuff
-map("n", "<M-o>", ":ClangdSwitchSourceHeader<CR>")
+-- map("n", "<M-o>", ":ClangdSwitchSourceHeader<CR>")
 
 -- LSP stuff
 map("n", "<leader>l", ":lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(), { 0 })<CR>")
-map("n", "<leader>ra", ":Lspsaga rename<CR>")
+-- map("n", "<leader>ra", ":Lspsaga rename<CR>")
 
 -- Oil.nvim
 map("n", "<leader>o", ":Oil --float<CR>")
