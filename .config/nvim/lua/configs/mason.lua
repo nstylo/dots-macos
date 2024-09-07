@@ -1,5 +1,5 @@
 local options = {
-  ensure_installed = {
+  pkgs = {
     "css-lsp",
     "dockerfile-language-server",
     "go-debug-adapter",

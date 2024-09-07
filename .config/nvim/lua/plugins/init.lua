@@ -182,9 +182,12 @@ return {
             enabled = true,
           },
         },
-      }
-      require("cmp").setup.buffer {
-        sources = { { name = "crates" } },
+        popup = {
+          autofocus = true,
+          keys = {
+            hide = {}, -- treat as normal nvim window
+          },
+        },
       }
     end,
   },
