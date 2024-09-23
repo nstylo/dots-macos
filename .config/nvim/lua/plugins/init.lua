@@ -30,7 +30,7 @@ return {
 
   {
     "nvim-telescope/telescope.nvim",
-    opts = require "configs.treesitter",
+    opts = require "configs.telescope",
   },
 
   -- {
@@ -141,31 +141,35 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     config = function()
       require("todo-comments").setup {
-        signs = true, -- show icons in the signs column
+        signs = false, -- show icons in the signs column
         sign_priority = 1, -- sign priority
-        keywords = {
-          FIX = {
-            icon = " ", -- icon used for the sign, and in search results
-            color = "error", -- can be a hex color, or a named color (see below)
-            alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
-            -- signs = false, -- configure signs for some keywords individually
-          },
-          TODO = { icon = " ", color = "todo" },
-          HACK = { icon = " ", color = "warning" },
-          WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
-          PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-          NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
-          TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+        highlight = {
+          keyword = "",
+          after = "",
         },
-        colors = {
-          error = { "@character" },
-          warning = { "@boolean" },
-          todo = { "@attribute" },
-          info = { "@function" },
-          hint = { "@constructor" },
-          default = { "@character" },
-          test = { "@character" },
-        },
+        -- keywords = {
+        --   FIX = {
+        --     icon = " ", -- icon used for the sign, and in search results
+        --     color = "error", -- can be a hex color, or a named color (see below)
+        --     alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
+        --     -- signs = false, -- configure signs for some keywords individually
+        --   },
+        --   TODO = { icon = " ", color = "todo" },
+        --   HACK = { icon = " ", color = "warning" },
+        --   WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
+        --   PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+        --   NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+        --   TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+        -- },
+        -- colors = {
+        --   error = { "@character" },
+        --   warning = { "@boolean" },
+        --   todo = { "@attribute" },
+        --   info = { "@function" },
+        --   hint = { "@constructor" },
+        --   default = { "@character" },
+        --   test = { "@character" },
+        -- },
       }
     end,
   },

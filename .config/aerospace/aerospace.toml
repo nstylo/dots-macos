@@ -60,12 +60,12 @@ on-focus-changed = "move-mouse window-lazy-center"
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 18
-inner.vertical =   18
-outer.left =       18
-outer.bottom =     18
-outer.top =        18
-outer.right =      18
+inner.horizontal = 14
+inner.vertical =   14
+outer.left =       14
+outer.bottom =     14
+outer.top =        14
+outer.right =      14
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -76,8 +76,11 @@ outer.right =      18
 # Open a new window in iTerm2 with AppleScript
 alt-enter = '''exec-and-forget osascript -e '
 tell application "iTerm"
-    create window with default profile
-    activate
+    if not (exists window 1) then
+        activate
+    else
+        create window with default profile
+    end if
 end tell'
 '''
 
@@ -180,5 +183,15 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = "com.spotify.client"
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = "com.electron.dockerdesktop"
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = "com.apple.DiskUtility"
 check-further-callbacks = true
 run = 'layout floating'

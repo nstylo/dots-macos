@@ -6,7 +6,7 @@ local options = {
     typescript = { "biome", "prettier", stop_after_first = true },
     javascriptreact = { "biome", "prettier", stop_after_first = true },
     typescriptreact = { "biome", "prettier", stop_after_first = true },
-    json = { "prettier" },
+    json = { "biome", "prettier", stop_after_first = true },
   },
 
   format_on_save = {
